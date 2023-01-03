@@ -1,0 +1,14 @@
+#This is a mortgage calculator program
+
+#input the variables
+P = int(input("Enter the principal amount: "))
+R = float(input("Enter the interest rate: "))
+T = int(input("Enter the number of years: "))
+
+#calculate the mortgage
+n = 12 * T
+r = R / (12 * 100)
+payment = P * (r * (1 + r) ** n) / ((1 + r) ** n - 1)
+
+#display the result
+print("Monthly Payment = Rs.", round(payment, 2))
