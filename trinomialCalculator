@@ -1,0 +1,19 @@
+import math
+
+def calculate_roots(a, b, c):
+    D = b**2 - 4*a*c
+    if D < 0:
+        print("This equation has no real solution")
+    elif D == 0:
+        x = (-b+math.sqrt(b**2-4*a*c))/2*a
+        print("This equation has one solutions: " + str(x))
+    else:
+        x1 = (-b+math.sqrt((b**2)-(4*(a*c))))/(2*a)
+        x2 = (-b-math.sqrt((b**2)-(4*(a*c))))/(2*a)
+        print("This equation has two solutions: " + str(x1) + " and " + str(x2))
+
+a = int(input("a: "))
+b = int(input("b: "))
+c = int(input("c: "))
+
+calculate_roots(a, b, c)
