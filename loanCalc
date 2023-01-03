@@ -1,0 +1,22 @@
+# This program will calculate the monthly payments of a loan
+
+# Ask user to input the loan amount
+amount = float(input("What is the loan amount? "))
+
+# Ask user to input the interest rate
+rate = float(input("What is the interest rate? "))
+
+# Calculate the monthly interest rate
+monthly_rate = rate / 1200
+
+# Ask user to input the loan duration in years
+years = int(input("What is the loan duration in years? "))
+
+# Calculate the number of payments
+payments = years * 12
+
+# Calculate the monthly payments
+monthly_payment = amount * monthly_rate / (1 - (1 / (1 + monthly_rate) ** payments))
+
+# Print the result
+print("Your monthly payment is $" + str(round(monthly_payment, 2)))
