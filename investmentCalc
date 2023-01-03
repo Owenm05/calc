@@ -1,0 +1,9 @@
+# Program to calculate the investment
+
+amount = float(input("Enter the amount to be invested: "))
+rate = float(input("Enter the rate of interest: "))
+time = int(input("Enter the time period: "))
+
+interest = amount * (1 + (rate/100)) ** time
+
+print("The investment after", time, "years is", interest)
